@@ -20,18 +20,18 @@ export class AppComponent {
   requestNotificationPermission() {
     if(Notification){
     Notification?.requestPermission()?.then((permission) => {
+      window.alert("has Notification API in browser and permission is "+permission);
       if (permission === 'granted') {
         console.log("permission granted for notification");
         this.intervalId = setInterval(() => {
           this.showNotification();
         }, 10000);
       } else {
-        
         console.log("permission denied for notification");
       }
     });
   }else{
-    alert("No Notification allowed here or Javascript disabled");
+    window.alert("No Notification allowed here or Javascript disabled");
   }
   }
   clearNotificationInterval() {
