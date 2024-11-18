@@ -24,6 +24,7 @@ export class AppComponent {
       if (permission === 'granted') {
         console.log("permission granted for notification");
         this.intervalId = setInterval(() => {
+          if(this.counter===0){window.alert("permission granted for notification");}
           this.showNotification();
         }, 10000);
       } else {
@@ -56,6 +57,9 @@ export class AppComponent {
       body: notifBody,
       icon: 'assets/icon.png',
     };
-    new Notification(notifTitle, options);
+    if (Notification) {
+      if(this.counter==1){window.alert("before first notification called");}
+      new Notification(notifTitle, options);
+    }
   }
 }
