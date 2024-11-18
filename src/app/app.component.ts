@@ -16,21 +16,11 @@ export class AppComponent implements OnDestroy {
   private counter: number = 0;
 
   constructor() {
-    this.checkNotificationPermission();
+   
   }
 
   ngOnDestroy() {
     this.clearNotificationInterval();
-  }
-
-  private checkNotificationPermission() {
-    if ('Notification' in window) {
-      Notification.requestPermission().then(permission => {
-        if (permission === 'granted') {
-          this.startNotificationInterval();
-        }
-      });
-    }
   }
 
   private startNotificationInterval() {
