@@ -14,17 +14,25 @@ export class AppComponent {
   private intervalId: any;
   private counter : any = 0;
   constructor() {
-    this.requestNotificationPermission();
+    
   }
 
   requestNotificationPermission() {
-    Notification.requestPermission().then((permission) => {
+    if(Notification){
+    Notification?.requestPermission()?.then((permission) => {
       if (permission === 'granted') {
         console.log("permission granted for notification");
+        this.intervalId = setInterval(() => {
+          this.showNotification();
+        }, 10000);
       } else {
+        
         console.log("permission denied for notification");
       }
     });
+  }else{
+    alert("No Notification allowed here or Javascript disabled");
+  }
   }
   clearNotificationInterval() {
     if (this.intervalId) {
@@ -35,9 +43,10 @@ export class AppComponent {
     }
   }
   subscribeToNotifications() {
-    this.intervalId = setInterval(() => {
-      this.showNotification();
-    }, 10000);
+    if(this.counter==0){
+      this.requestNotificationPermission();
+    } 
+    
   }
   showNotification() {
     this.counter++;
