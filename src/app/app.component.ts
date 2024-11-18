@@ -59,7 +59,10 @@ export class AppComponent {
     };
     if (Notification) {
       if(this.counter==1){window.alert("before first notification called");}
-      new Notification(notifTitle, options);
+      const notification = new Notification(notifTitle, options);
+      notification.onerror=(e)=>{
+        window.alert("some error in notification : "+JSON.stringify(e))
+      }
     }
   }
 }
