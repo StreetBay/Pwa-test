@@ -11,7 +11,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
   styleUrl: './app.component.css',
 })
 export class AppComponent implements OnDestroy {
-  title = 'pwa-testers';
+  title = 'pwa-tester';
   private intervalId: any;
   private counter: number = 0;
 
@@ -60,8 +60,6 @@ export class AppComponent implements OnDestroy {
     const notifBody = `This is notification #${this.counter}`;
     const options = {
       body: notifBody,
-      icon: '/assets/icons/icon-72x72.png',
-      badge: '/assets/icons/icon-72x72.png'
     };
 
     if ('Notification' in window && Notification.permission === 'granted') {
