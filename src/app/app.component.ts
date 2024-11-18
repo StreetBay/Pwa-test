@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -9,31 +10,45 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
   title = 'pwa-testers';
   private intervalId: any;
-  private counter : any = 0;
+  private counter: number = 0;
+
   constructor() {
-    
+    this.checkNotificationPermission();
+  }
+
+  ngOnDestroy() {
+    this.clearNotificationInterval();
+  }
+
+  private checkNotificationPermission() {
+    if ('Notification' in window) {
+      Notification.requestPermission().then(permission => {
+        if (permission === 'granted') {
+          this.startNotificationInterval();
+        }
+      });
+    }
+  }
+
+  private startNotificationInterval() {
+    this.intervalId = setInterval(() => {
+      this.showNotification();
+    }, 10000);
   }
 
   requestNotificationPermission() {
-    if(Notification){
-    Notification?.requestPermission()?.then((permission) => {
-      window.alert("has Notification API in browser and permission is "+permission);
-      if (permission === 'granted') {
-        console.log("permission granted for notification");
-        this.intervalId = setInterval(() => {
-          if(this.counter===0){window.alert("permission granted for notification");}
-          this.showNotification();
-        }, 10000);
-      } else {
-        console.log("permission denied for notification");
-      }
-    });
-  }else{
-    window.alert("No Notification allowed here or Javascript disabled");
-  }
+    if ('Notification' in window) {
+      Notification.requestPermission().then(permission => {
+        if (permission === 'granted') {
+          this.startNotificationInterval();
+        }
+      });
+    } else {
+      console.log('Notifications not supported');
+    }
   }
   clearNotificationInterval() {
     if (this.intervalId) {
@@ -49,19 +64,18 @@ export class AppComponent {
     } 
     
   }
-  showNotification() {
+  private showNotification() {
     this.counter++;
-    const notifTitle = 'Hello!';
-    const notifBody = 'This is a simulated notification : '+this.counter + ' .';
+    const notifTitle = 'PWA Notification';
+    const notifBody = `This is notification #${this.counter}`;
     const options = {
       body: notifBody,
+      icon: '/assets/icons/icon-72x72.png',
+      badge: '/assets/icons/icon-72x72.png'
     };
-    if (Notification) {
-      if(this.counter==1){window.alert("before first notification called");}
-      const notification = new Notification(notifTitle, options);
-      notification.onerror=(e)=>{
-        window.alert("some error in notification : "+JSON.stringify(e))
-      }
+
+    if ('Notification' in window && Notification.permission === 'granted') {
+      new Notification(notifTitle, options);
     }
   }
 }
