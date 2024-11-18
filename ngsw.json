@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1731960957386,
+  "timestamp": 1731962096217,
   "index": "https://StreetBay.github.io/Pwa-test/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://StreetBay.github.io/Pwa-test/favicon.ico",
         "https://StreetBay.github.io/Pwa-test/index.html",
-        "https://StreetBay.github.io/Pwa-test/main-BFCGIDAD.js",
+        "https://StreetBay.github.io/Pwa-test/main-KUW2WR2N.js",
         "https://StreetBay.github.io/Pwa-test/manifest.webmanifest",
         "https://StreetBay.github.io/Pwa-test/polyfills-FFHMD2TL.js",
         "https://StreetBay.github.io/Pwa-test/styles-JVVAYVNO.css"
@@ -51,8 +51,8 @@
     "https://StreetBay.github.io/Pwa-test/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "https://StreetBay.github.io/Pwa-test/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "https://StreetBay.github.io/Pwa-test/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "https://StreetBay.github.io/Pwa-test/index.html": "7fabc789ebb24b0865bfd14362a82d1214a65e40",
-    "https://StreetBay.github.io/Pwa-test/main-BFCGIDAD.js": "264ce7194cc4e0859a493d6bb006eb123ff9f885",
+    "https://StreetBay.github.io/Pwa-test/index.html": "f6ab17e3f22512ac172ada0ae2c89a7f5edc9669",
+    "https://StreetBay.github.io/Pwa-test/main-KUW2WR2N.js": "51aaf3fb3ec54d61a3b692f2602ea779ffdab539",
     "https://StreetBay.github.io/Pwa-test/manifest.webmanifest": "c024cf00f95df593d3b1765aa9332e57ea142c40",
     "https://StreetBay.github.io/Pwa-test/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
     "https://StreetBay.github.io/Pwa-test/styles-JVVAYVNO.css": "b36315d4a58b1c104b66a6a963eeec3153115269"
