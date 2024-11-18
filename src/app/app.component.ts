@@ -55,7 +55,6 @@ export class AppComponent {
     const notifBody = 'This is a simulated notification : '+this.counter + ' .';
     const options = {
       body: notifBody,
-      icon: 'assets/icon.png',
     };
     if (Notification) {
       if(this.counter==1){window.alert("before first notification called");}
