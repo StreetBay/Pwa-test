@@ -1,0 +1,29 @@
+<main class="main" style=" display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh">
+  <div class="content" style="display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;">
+    <h1>Hello, {{ title }}</h1>
+    <p>Congratulations! Your app is running. 🎉</p>
+    <section>
+      <h3>Notification Test </h3>
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style" value="UnSubscribe">
+        <mat-button-toggle
+          value="Subscribe"
+          (change)="subscribeToNotifications()">
+          Subscribe
+        </mat-button-toggle>
+        <mat-button-toggle
+          value="UnSubscribe"
+          (change)="clearNotificationInterval()">
+          UnSubscribe
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </section>
+  </div>
+</main>
+
+<router-outlet />
