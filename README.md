@@ -1,27 +1,34 @@
-# PwaTest
+# Hi there, I'm StreetBay 👋
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+![Profile Views](https://komarev.com/ghpvc/?username=StreetBay&color=brightgreen)
 
-## Development server
+## About Me
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+I am a passionate developer with interests in a variety of technologies and fields. I enjoy working on innovative projects and continuously learning new things.
 
-## Code scaffolding
+- 💼 Currently working on: [FinTech Apps](#)
+- 💬 Ask me about: [Angular/React]
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies & Tools
 
-## Build
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat&logo=node.js&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)
+![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## GitHub Stats
 
-## Running unit tests
+![StreetBay's GitHub stats](https://github-readme-stats.vercel.app/api?username=StreetBay&show_icons=true&theme=radical)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Top Languages
 
-## Running end-to-end tests
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=StreetBay&layout=compact&theme=radical)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Connect with Me
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://in.linkedin.com/in/purvanshu)
+[![Twitter](https://img.shields.io/badge/-Twitter-1DA1F2?style=flat&logo=twitter&logoColor=white)](https://x.com/purvanshukamdar)
